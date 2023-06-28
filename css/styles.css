@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;1,700;1,900&display=swap");
+
+/* font-family: 'Red Hat Display', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  background-color: var(--very-pale-blue);
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 450px;
+  margin: 20px;
+}
+
+.container-content {
+  text-align: center;
+}
+
+.summary {
+  padding: 5% 0%;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.summary-des {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  padding: 0% 10%;
+  padding-bottom: 5%;
+  line-height: 1.5em;
+}
+
+.plan-price {
+  display: flex;
+  flex-direction: row;
+  padding: 0% 10% 10% 10%;
+  margin-left: 11.5%;
+  border-radius: 10px;
+  background-color: hsl(180, 65%, 97%);
+  max-width: 350px;
+  max-height: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan-price img {
+  padding-right: 15%;
+  margin-top: 18%;
+  padding-right: 6%;
+}
+
+.yearly {
+  margin-top: 18%;
+  padding-right: 35%;
+}
+
+.yearly_plan {
+  font-size: 15px;
+  padding-bottom: 5px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.actual_price{
+  color: var(--desaturated-blue);
+}
+
+.option {
+  color: var(--bright-blue);
+  margin-top: 36px;
+  font-weight: 700;
+  transition: background-color .3s ease;
+}
+
+.option:hover{
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.button {
+  padding: 8%;
+  padding-right: 11%;
+  padding-left: 12%;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  font-family: inherit;
+}
+
+.proceed-btn {
+  padding: 15px;
+  border-radius: 12px;
+  border-style: none;
+  background-color: var(--bright-blue);
+  margin-bottom: 28px;
+  transition: background-color 0.3s ease;
+  color: var(--very-pale-blue);
+  box-shadow: 0px 12px 5px 8px rgba(0, 0, 0, 0.05)
+}
+
+.proceed-btn:hover {
+  background-color: hsl(246, 25%, 57%);
+}
+
+.cancel-btn {
+  padding: 15px;
+  border-radius: 12px;
+  border-style: none;
+  background-color: var(--very-pale-blue);
+  color: var(--desaturated-blue);
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+.cancel-btn:hover {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-image: url("../images/pattern-background-mobile.svg");
+    background: no-repeat;
+    background-size: 500px;
+    min-height: 100vh;
+    background-color: var(--pale-blue);
+  }
+
+  .container-content{
+    display: block;
+  }
+
+  .plan-price {
+    margin-right: 35px;
+    font-size: 12px;
+    height: 70px;
+  }
+
+  .yearly {
+    margin-top: 16%;
+    padding-right: 29%;
+    font-size: 13px;
+  }
+
+  .yearly_plan{
+    font-size: 13px;
+    width: 80px;
+  }
+
+  .option {
+    font-size: 13px;
+  }
+
+  .container {
+    width: 320px;
+    margin: 10pxx;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
