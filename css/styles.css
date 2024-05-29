@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;1,700;1,900&display=swap");
 
-/* font-family: 'Red Hat Display', sans-serif; */
-
 * {
   margin: 0;
   padding: 0;
@@ -9,194 +7,162 @@
 }
 
 :root {
+  /******************* PRIMARY *****************/
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
+
+  /******************* NEUTRAL ****************/
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
 }
 
-body {
+main {
   font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
-  min-height: 100vh;
-  background-image: url("../images/pattern-background-desktop.svg");
+  background-color: var(--pale-blue);
+  background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: var(--pale-blue);
+  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-img {
-  max-width: 100%;
-}
-
-.container {
+.card {
   background-color: var(--very-pale-blue);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  border-radius: 0.9245rem;
+  overflow: hidden;
+}
+
+/********************** CARD IMAGE *********************/
+.img img {
+  max-width: 100%;
+  position: relative;
+}
+
+/************** CARD CONTENT **************/
+.card_content {
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 450px;
-  margin: 20px;
-}
-
-.container-content {
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.summary {
-  padding: 5% 0%;
+h1 {
   color: var(--dark-blue);
-  font-weight: 900;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.summary-des {
+.intro {
   color: var(--desaturated-blue);
-  font-weight: 500;
-  padding: 0% 10%;
-  padding-bottom: 5%;
-  line-height: 1.5em;
+  margin-bottom: 1rem;
 }
 
-.plan-price {
+/***************** PLAN SECTION ******************/
+.plan {
+  background-color: hsl(224, 73%, 97%);
+  padding: 1rem 1rem;
+  border-radius: 0.6245rem;
   display: flex;
-  flex-direction: row;
-  padding: 0% 10% 10% 10%;
-  margin-left: 11.5%;
-  border-radius: 10px;
-  background-color: hsl(180, 65%, 97%);
-  max-width: 350px;
-  max-height: 90px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 2.5rem;
 }
 
-.plan-price img {
-  padding-right: 15%;
-  margin-top: 18%;
-  padding-right: 6%;
+.annual-plan {
+  display: flex;
 }
 
-.yearly {
-  margin-top: 18%;
-  padding-right: 35%;
+.annual-plan img {
+  width: 40px;
+  height: 40px;
 }
 
-.yearly_plan {
-  font-size: 15px;
-  padding-bottom: 5px;
-  font-weight: 700;
+.plan-text {
+  margin: 0 2rem;
+  color: var(--desaturated-blue);
+}
+
+h2 {
   color: var(--dark-blue);
+  font-size: 16px;
 }
 
-.actual_price{
-  color: var(--desaturated-blue);
-}
-
-.option {
+.change-plan a {
   color: var(--bright-blue);
-  margin-top: 36px;
-  font-weight: 700;
-  transition: background-color .3s ease;
+  font-weight: bold;
 }
 
-.option:hover{
-  color: var(--desaturated-blue);
+.change-plan a:hover {
+  cursor: pointer;
   text-decoration: none;
+  opacity: 0.8;
 }
 
-button {
-  width: 100%;
+/********************* BUTTONS ******************/
+
+.buttons {
+  margin-bottom: 1.5rem;
+}
+
+.payment-button {
+  margin-bottom: 1.5rem;
+}
+.payment-button button {
+  font-weight: bold;
+  color: var(--very-pale-blue);
+  background-color: var(--bright-blue);
+  max-width: 100%;
+  padding: 1rem 4.5rem;
+  border-style: none;
+  border-radius: 0.6245rem;
+  box-shadow: 0px 8px 5px 5px hsl(223, 100%, 92%);
+}
+
+.payment-button button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.cancel-button button {
+  color: var(--desaturated-blue);
+  background-color: var(--very-pale-blue);
+  font-weight: bold;
+  padding: 1rem 6rem;
+  border-style: none;
+  border-radius: 0.6245rem;
+}
+
+.cancel-button button:hover {
+  color: var(--dark-blue);
   cursor: pointer;
 }
 
-.button {
-  padding: 8%;
-  padding-right: 11%;
-  padding-left: 12%;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  font-family: inherit;
-}
-
-.proceed-btn {
-  padding: 15px;
-  border-radius: 12px;
-  border-style: none;
-  background-color: var(--bright-blue);
-  margin-bottom: 28px;
-  transition: background-color 0.3s ease;
-  color: var(--very-pale-blue);
-  box-shadow: 0px 12px 5px 8px rgba(0, 0, 0, 0.05)
-}
-
-.proceed-btn:hover {
-  background-color: hsl(246, 25%, 57%);
-}
-
-.cancel-btn {
-  padding: 15px;
-  border-radius: 12px;
-  border-style: none;
-  background-color: var(--very-pale-blue);
-  color: var(--desaturated-blue);
-  transition: background-color 0.3s ease;
-  font-weight: 700;
-}
-
-.cancel-btn:hover {
-  color: var(--dark-blue);
-  font-weight: 700;
-}
-
+/******************** RESPONSIVENESS *****************/
 @media only screen and (max-width: 375px) {
-  body {
-    background-image: url("../images/pattern-background-mobile.svg");
-    background: no-repeat;
-    background-size: 500px;
-    min-height: 100vh;
-    background-color: var(--pale-blue);
+  main {
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-
-  .container-content{
-    display: block;
-  }
-
-  .plan-price {
-    margin-right: 35px;
-    font-size: 12px;
-    height: 70px;
-  }
-
-  .yearly {
-    margin-top: 16%;
-    padding-right: 29%;
-    font-size: 13px;
-  }
-
-  .yearly_plan{
-    font-size: 13px;
-    width: 80px;
-  }
-
-  .option {
-    font-size: 13px;
-  }
-
-  .container {
+  .card {
     width: 320px;
-    margin: 10pxx;
   }
-}
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    padding: 0 1.6rem;
+  }
 }
